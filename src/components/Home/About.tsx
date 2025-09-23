@@ -26,8 +26,8 @@ const About = () => {
                 <div className="w-[374px] h-[83px] rounded bg-primary absolute top-[111px] left-[153px] opacity-[60%]"></div>
             </div>
             <div className="flex flex-col justify-center  w-full h-auto pr-[100px] pl-[50px]">
-                <h2 className="text-[65px] font-popins font-[600] font-bold tracking-[0.03em] text-secondary">About Me</h2>
-                <p className="font-[400] text-[21px] w-full font-normal font-popins tracking-[0.03em] mt-[15px]">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
+                <h2 className="text-[65px] font-popins  font-bold tracking-[0.03em] text-secondary">About Me</h2>
+                <p className=" text-[21px] w-full font-normal font-popins tracking-[0.03em] mt-[15px]">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
                 <div>
 
                     {/* <ul className="mt-[10px] flex flex-col gap-[15px]">
@@ -59,7 +59,7 @@ const About = () => {
                     <ul className="mt-[10px] flex flex-col gap-[15px]">
                         {Skills.map((skill) => (
                             <li key={skill.name} className="flex flex-col gap-[18px]">
-                                <h2 className="font-[600] text-[24px] font-bold text-secondary font-popins tracking-[0.03em]">{skill.name}</h2>
+                                <h2 className="text-[24px] font-bold text-secondary font-popins tracking-[0.03em]">{skill.name}</h2>
                                 <div className="relative h-[12px] w-full rounded-full bg-[#EDECEC]">
                                     <div
                                         className="h-full rounded-full bg-[#ff7a00] transition-[width] duration-700 ease-out"

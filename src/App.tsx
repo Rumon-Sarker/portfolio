@@ -1,7 +1,7 @@
 
 import './App.css'
 import Home from './pages/Home/Home'
-// import Footer from './Shared/Footer'
+import Footer from './Shared/Footer'
 import Header from './Shared/Header'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <Home />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
