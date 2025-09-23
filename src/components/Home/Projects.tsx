@@ -1,7 +1,6 @@
 import SectionHeader from "../SharedSection/SectionHeader";
 import { Project1 } from "../../assets";
-import { Button } from "../ui/button";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 type Project = {
     id: number;
     title: string;
@@ -31,45 +30,67 @@ const projects: Project[] = [
         category: 'App Design',
         imageUrl: Project1,
     },
+    {
+        id: 4,
+        title: 'Web page Desin',
+        category: 'Graphic Design',
+        imageUrl: Project1,
+    },
 
 ]
 
+const categories = ['All', 'UI/UX', 'Web Design', 'App Design', 'Graphic Design'] as const;
+type Category = typeof categories[number]
+
+
 const Projects = () => {
 
-    const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+    const [active, setActive] = useState<Category>("All");
 
-
-
-    const categories = ['All', 'UI/UX', 'Web Design', 'App Design', 'Graphic Design'];
-
-
-    const handleCategoryClick = (category: string) => {
-        if (category === 'All') {
-            setFilteredProjects(projects);
-        } else {
-            setFilteredProjects(projects.filter((project) => project.category === category));
-        }
-    };
+    const filter = useMemo(() => (active === "All" ? projects : projects.filter(p => p.category === active)), [active])
 
     return (
-        <section className="max-w-[1423px] mx-auto w-full mt-[139px]">
+        <section id="projects" className="max-w-[1423px] mx-auto w-full mt-[139px] md:px-0 px-[20px] ">
             <SectionHeader title="My Projects" description="Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus" />
             {/* tab section  */}
-            <div className="flex overflow-x-auto gap-[22px] justify-center mt-[59px] ">
-                {categories.map((category) => (
-                    <Button key={category} variant="outline" size="lg" className="px-[20px] hover:bg-primary hover:text-white  py-[10px] rounded-[12px] border text-[16px] font-[500] font-poppins leading-[100%] tracking-[0.6px]" onClick={() => handleCategoryClick(category)}>{category}</Button>
 
-                ))}
+            {/* Filter tabs */}
+            <div
+                role="tablist"
+                aria-label="Project categories"
+                className="flex flex-wrap gap-[22px] justify-center mt-[59px]"
+            >
+                {categories.map(cat => {
+                    const selected = active === cat;
+                    return (
+                        <button
+                            key={cat}
+                            role="tab"
+                            aria-selected={selected}
+                            onClick={() => setActive(cat)}
+                            className={[
+                                "whitespace-nowrap rounded-[12px] cursor-pointer  hover:text-white px-[20px] py-[10px] text-[15px] font-medium transition-colors leading-[100%] tracking-[0.6px]",
+                                "border",
+                                selected
+                                    ? "bg-primary text-white border-primary"
+                                    : "bg-white text-secondary border-[0.4px] border-border hover:bg-primary hover:border-primary"
+                            ].join(" ")}
+                        >
+                            {cat}
+                        </button>
+                    );
+                })}
             </div>
 
+
             {/* project grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[44px] mt-[106px]">
-                {filteredProjects.map((project) => (
-                    <div key={project.id} className="max-w-[445px] w-full rounded-lg">
+            <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-[44px] md:gap-[32px] gap-[28px] mt-[106px]">
+                {filter.map((project) => (
+                    <div key={project.id} className="max-w-[445px] flex flex-col lg:mx-0 mx-auto w-full rounded-lg ">
                         <img src={project.imageUrl} alt={project.title} className="w-full" />
                         <div>
-                            <p className="text-[19px] leading-[100%] tracking-[3%] font-normal text-primary font-poppins mt-[37px]">{project.category}</p>
-                            <h2 className="text-[24px] font-bold text-secondary leading-[100%] tracking-[3%] font-poppins mt-[10px]">{project.title}</h2>
+                            <p className="lg:text-[19px] text-[16px] leading-[100%] tracking-[3%] font-normal text-primary font-poppins mt-[37px]">{project.category}</p>
+                            <h2 className="lg:text-[24px] md:text-[20px] text-[18px] font-bold text-secondary leading-[100%] tracking-[3%] font-poppins mt-[10px]">{project.title}</h2>
                         </div>
                     </div>
                 ))}
