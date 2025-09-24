@@ -86,7 +86,7 @@ const Services = () => {
                 <SectionHeader title="Services" description="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium" />
 
                 {/* services grid */}
-                <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2  grid-cols-1  xl:gap-[31px] lg:gap-[28px] md:gap-[10px] gap-[6px] px-4">
+                <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2  grid-cols-1  xl:gap-[31px] lg:gap-[28px] gap-[10px] px-4">
                     {servicesInfo.map((service) => (
                         <div key={service.title} className="flex cursor-pointer mx-auto flex-col justify-center bg-cardBg max-w-[330px] h-auto p-6 rounded-[14px] px-[18px] ">
                             <div className="mb-[19px] flex lg:mx-0 mx-auto">{service.icon}</div>
