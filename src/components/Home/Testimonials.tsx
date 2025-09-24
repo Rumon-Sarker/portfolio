@@ -54,10 +54,17 @@ const Testimonials = () => {
                         disableOnInteraction: false,
                     }}
                     pagination={{
-                        clickable: true,
-                        bulletClass: "swiper-pagination-bullet lg:!w-[57px] md:!w-[40px] !w-[30px] lg:!h-[16px] md:!h-[10px] !h-[8px] !rounded-[8px] !bg-muted-foreground !opacity-10",
-                        bulletActiveClass: "swiper-pagination-bullet-active !bg-primary !opacity-100",
+                    clickable: true,
+                    bulletClass:
+                        "swiper-pagination-bullet lg:!w-[57px] md:!w-[40px] !w-[30px] lg:!h-[16px] md:!h-[10px] !h-[8px] !rounded-[8px] !bg-muted-foreground !opacity-60 !bg-buttonBg",  // Add dark mode class
+                    bulletActiveClass:
+                        "swiper-pagination-bullet-active !bg-primary !opacity-100 dark:!bg-primary", // Dark mode active bullet color
                     }}
+                    // pagination={{
+                    //     clickable: true,
+                    //     bulletClass: "swiper-pagination-bullet lg:!w-[57px] md:!w-[40px] !w-[30px] lg:!h-[16px] md:!h-[10px] !h-[8px] !rounded-[8px] !bg-muted-foreground !opacity-10",
+                    //     bulletActiveClass: "swiper-pagination-bullet-active !bg-primary !opacity-100",
+                    // }}
                     breakpoints={{
                         640: {
                             slidesPerView: 1.2,

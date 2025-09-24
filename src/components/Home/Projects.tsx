@@ -90,7 +90,7 @@ const Projects = () => {
                         <img src={project.imageUrl} alt={project.title} className="w-full" />
                         <div>
                             <p className="lg:text-[19px] text-[16px] leading-[100%] tracking-[3%] font-normal text-primary font-poppins mt-[37px]">{project.category}</p>
-                            <h2 className="lg:text-[24px] md:text-[20px] text-[18px] font-bold text-secondary leading-[100%] tracking-[3%] font-poppins mt-[10px]">{project.title}</h2>
+                            <h2 className="lg:text-[24px] md:text-[20px] text-[18px] font-bold text-secondary dark:text-white leading-[100%] tracking-[3%] font-poppins mt-[10px]">{project.title}</h2>
                         </div>
                     </div>
                 ))}
