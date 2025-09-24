@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 const Banner = () => {
     return (
         <section id="home" className="flex flex-col items-center max-w-[1400px] w-full justify-center mx-auto md:px-0 px-[20px] ">
-            <div className="flex lg:flex-row flex-col-reverse items-center justify-between w-full lg:mt-[120px] mt-[20px]">
+            <div className="flex lg:flex-row flex-col-reverse items-center justify-between w-full lg:mt-[120px] mt-[20px] pt-[61px]">
                 {/* banner left */}
                 <div className="flex flex-col">
                     <div className="flex flex-col justify-center max-w-[714px] w-full gap-2 lg:pr-[9px] pr-0">
@@ -18,7 +18,7 @@ const Banner = () => {
                     </div>
                     <p className="lg:text-[21px] md:text-[18px] text-[16px] dark:text-white text-secondary max-w-[698px] w-full lg:pt-[28px] md:pt-[20px] pt-[12px]  lg:pl-[7px] pl-0 font-[400] leading-[100%] tracking-[0.03em] text-justify ">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra</p>
 
-                    <Button className="max-w-[188px] w-full h-[52px] mt-[22px] text-[21px] tracking-[0.03em] leading-[100%]" variant="primary">
+                    <Button className="max-w-[188px] cursor-pointer w-full h-[52px] mt-[22px] text-[21px] tracking-[0.03em] leading-[100%]" variant="primary">
                         Hire Me
                     </Button>
 

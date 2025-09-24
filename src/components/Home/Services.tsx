@@ -88,7 +88,7 @@ const Services = () => {
                 {/* services grid */}
                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2  grid-cols-1  xl:gap-[31px] lg:gap-[28px] md:gap-[10px] gap-[6px] px-4">
                     {servicesInfo.map((service) => (
-                        <div key={service.title} className="flex mx-auto flex-col justify-center bg-cardBg max-w-[330px] h-auto p-6 rounded-[14px] px-[18px] ">
+                        <div key={service.title} className="flex cursor-pointer mx-auto flex-col justify-center bg-cardBg max-w-[330px] h-auto p-6 rounded-[14px] px-[18px] ">
                             <div className="mb-[19px] flex lg:mx-0 mx-auto">{service.icon}</div>
                             <h3 className="lg:text-[32px] md:text-[28px] sm:text-[20px] lg:text-start text-center text-[18px] font-semibold font-poppins mb-[15px]">{service.title}</h3>
                             <p className="text-secondary lg:text-[19px] text-[16px] text-center font-poppins leading-[100%] font-normal">{service.description}</p>

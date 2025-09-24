@@ -86,7 +86,7 @@ const Projects = () => {
             {/* project grid */}
             <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-[44px] md:gap-[32px] gap-[28px] mt-[106px]">
                 {filter.map((project) => (
-                    <div key={project.id} className="max-w-[445px] flex flex-col lg:mx-0 mx-auto w-full rounded-lg ">
+                    <div key={project.id} className="max-w-[445px] cursor-pointer flex flex-col lg:mx-0 mx-auto w-full rounded-lg ">
                         <img src={project.imageUrl} alt={project.title} className="w-full" />
                         <div>
                             <p className="lg:text-[19px] text-[16px] leading-[100%] tracking-[3%] font-normal text-primary font-poppins mt-[37px]">{project.category}</p>
