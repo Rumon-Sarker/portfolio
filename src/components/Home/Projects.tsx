@@ -50,7 +50,7 @@ const Projects = () => {
     const filter = useMemo(() => (active === "All" ? projects : projects.filter(p => p.category === active)), [active])
 
     return (
-        <section id="projects" className="max-w-[1423px] mx-auto w-full mt-[139px] md:px-0 px-[20px] ">
+        <section id="projects" className="max-w-[1423px] mx-auto w-full lg:mt-[139px] md:mt-[80px] mt-[60px] xl:px-0 px-[20px] ">
             <SectionHeader title="My Projects" description="Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus" />
             {/* tab section  */}
 
@@ -58,7 +58,7 @@ const Projects = () => {
             <div
                 role="tablist"
                 aria-label="Project categories"
-                className="flex flex-wrap gap-[22px] justify-center mt-[59px]"
+                className="flex flex-wrap xl:gap-[22px] lg:gap-[16px] md:gap-[14px] gap-[8px] justify-center mt-[59px]"
             >
                 {categories.map(cat => {
                     const selected = active === cat;
@@ -73,7 +73,7 @@ const Projects = () => {
                                 "border",
                                 selected
                                     ? "bg-primary text-white border-primary"
-                                    : "bg-white text-secondary border-[0.4px] border-border hover:bg-primary hover:border-primary"
+                                    : "bg-white text-secondary border-[0.4px] border-border  transform duration-500 hover:bg-primary hover:border-primary"
                             ].join(" ")}
                         >
                             {cat}
@@ -84,7 +84,7 @@ const Projects = () => {
 
 
             {/* project grid */}
-            <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-[44px] md:gap-[32px] gap-[28px] mt-[106px]">
+            <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-[44px] md:gap-[32px] gap-[28px] lg:mt-[106px] md:mt-[60px] mt-[40px]">
                 {filter.map((project) => (
                     <div key={project.id} className="max-w-[445px] cursor-pointer flex flex-col lg:mx-0 mx-auto w-full rounded-lg ">
                         <img src={project.imageUrl} alt={project.title} className="w-full" />

@@ -20,7 +20,7 @@ const About = () => {
 
 
     return (
-        <section id="about" className="max-w-[1470px] flex lg:flex-row flex-col justify-between w-full h-auto mt-[69.50px] mx-auto md:px-0 px-[20px]">
+        <section id="about" className="max-w-[1470px] flex lg:flex-row flex-col justify-between w-full h-auto mt-[69.50px] mx-auto xl:px-0 px-[20px]">
             <div className="max-w-[681px] flex justify-center w-full h-auto relative mx-auto">
                 <img className="lg:w-[681px] md:w-[400px] relative w-[300px]" src={AboutImage} alt="About Image" />
                 <div className="lg:w-[374px] md:w-[300px] w-[200px] lg:h-[83px] md:h-[50px] h-[40px] rounded bg-primary absolute lg:top-[111px] md:top-[60px] top-[40px] -translate-x-1/2 left-1/2 opacity-[60%]"></div>

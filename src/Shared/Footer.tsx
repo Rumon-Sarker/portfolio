@@ -25,13 +25,13 @@ const Footer = () => {
     return (
         <section className="w-full bg-cardBg dark:bg-darkbg">
             {/* logo  */}
-            <div className="flex lg:pt-[109px] cursor-pointer md:pt-[80px] pt-[40px]  max-w-[279px] w-full mx-auto justify-center">
+            <div className="flex lg:pt-[109px] cursor-pointer md:pt-[80px] pt-[40px] lg:max-w-[279px] lg:w-full md:w-[222px] w-[180px] mx-auto justify-center">
                 <img src={isDarkMode ? DarkLogo : Logo} alt="logo" />
             </div>
             {/* navber  */}
             <div className="flex max-w-[807px] flex-wrap mx-auto items-center justify-center lg:gap-[12px] md:gap-[8px] gap-[5px] lg:mt-[65px] md:mt-[40px] mt-[30px]">
                 {footerNav.map(nav =>
-                    <a key={nav.id} href={nav.link} className="hover:text-primary text-secondary dark:text-white font-poppins font-normal lg:text-[21px] md:text-[18px] text-[16px] lg:py-[10px] md:py-[8ppx] py-[6px]  lg:px-[14px] md:px-[10px] px-[8px] leading-[100%] tracking-[3%]">
+                    <a key={nav.id} href={nav.link} className="hover:text-primary  transform duration-600 text-secondary dark:text-white font-poppins font-normal lg:text-[21px] md:text-[18px] text-[16px] lg:py-[10px] md:py-[8ppx] py-[6px]  lg:px-[14px] md:px-[10px] px-[8px] leading-[100%] tracking-[3%]">
                         {nav.name}
                     </a>
                 )}

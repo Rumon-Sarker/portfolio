@@ -80,7 +80,7 @@ const Services = () => {
         },
     ];
     return (
-        <section id="services" className="max-w-[1413px] mx-auto lg:mt-[139px] md:mt-[100px] mt-[50px] lg:px-0 px-4">
+        <section id="services" className="max-w-[1413px] mx-auto lg:mt-[139px] md:mt-[100px] mt-[50px] xl:px-0 px-[20px]">
             <div className="flex flex-col justify-center gap-[24px]">
                 {/* section header */}
                 <SectionHeader title="Services" description="Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium" />
