@@ -1,5 +1,6 @@
-import { Logo } from "../assets";
+import { DarkLogo, Logo } from "../assets";
 import SocialLink from "../components/SharedSection/SocialLink";
+import { useDarkMode } from "../context/DarkModeContext";
 
 type footerNavType = {
     id: number;
@@ -19,11 +20,13 @@ const footerNav: footerNavType[] = [
 
 const Footer = () => {
 
+    const { isDarkMode } = useDarkMode()
+
     return (
         <section className="w-full bg-cardBg dark:bg-darkbg">
             {/* logo  */}
             <div className="flex lg:pt-[109px] cursor-pointer md:pt-[80px] pt-[40px]  max-w-[279px] w-full mx-auto justify-center">
-                <img src={Logo} alt="logo" />
+                <img src={isDarkMode ? DarkLogo : Logo} alt="logo" />
             </div>
             {/* navber  */}
             <div className="flex max-w-[807px] flex-wrap mx-auto items-center justify-center lg:gap-[12px] md:gap-[8px] gap-[5px] lg:mt-[65px] md:mt-[40px] mt-[30px]">
